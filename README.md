@@ -1,8 +1,8 @@
 # AndroidLearningNotes
 ## Java
 ### Java基础面试知识
-java中==和equals和hashCode的区别
-int、char、long各占多少字节数
++ java中==和equals和hashCode的区别
++ int、char、long各占多少字节数
 int与integer的区别
 探探对java多态的理解
 String、StringBuffer、StringBuilder区别
