@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Android",
+    "path": "android/",
+    "data": [
+      {
+        "title": "Android基础知识",
+        "path": "android基础知识/",
+        "data": [
+          {
+            "title": "四大组件是什么",
+            "path": "四大组件是什么.md"
+          },
+          {
+            "title": "四大组件的生命周期和简单用法",
+            "path": "四大组件的生命周期和简单用法.md"
+          },
+          {
+            "title": "Activity之间的通信方式",
+            "path": "Activity之间的通信方式.md"
+          },
+          {
+            "title": "Activity各种情况下的生命周期",
+            "path": "Activity各种情况下的生命周期.md"
+          }
+        ]
+      }
+    ]
+  }
+]
