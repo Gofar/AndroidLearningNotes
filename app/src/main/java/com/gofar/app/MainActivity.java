@@ -9,6 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.List;
+
 /**
  * @author lcf
  * @date 2018/7/6 15:07
@@ -31,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
+                default:
+                    break;
             }
             return false;
         }
@@ -53,7 +63,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void init(){
-
+    private void init() {
+        try {
+            InputStream is = getAssets().open("catalog.json");
+            Gson gson = new Gson();
+            List<Catalog> data = gson.fromJson(new InputStreamReader(is), new TypeToken<Catalog>() {
+            }.getType());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
