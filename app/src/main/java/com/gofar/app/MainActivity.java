@@ -9,13 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.List;
+import com.gofar.app.ui.WebActivity;
 
 /**
  * @author lcf
@@ -32,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
+
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
@@ -61,16 +56,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WebActivity.class));
             }
         });
-    }
-
-    private void init() {
-        try {
-            InputStream is = getAssets().open("catalog.json");
-            Gson gson = new Gson();
-            List<Catalog> data = gson.fromJson(new InputStreamReader(is), new TypeToken<Catalog>() {
-            }.getType());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

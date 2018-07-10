@@ -32,4 +32,7 @@ public interface CatalogDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<CatalogEntity> catalogs);
+
+    @Query("SELECT * FROM catalogs WHERE catalog= :catalog GROUP BY secCatalog")
+    LiveData<List<CatalogEntity>> getSecCatologsByCatalog(String catalog);
 }

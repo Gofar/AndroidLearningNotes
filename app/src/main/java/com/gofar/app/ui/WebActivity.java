@@ -1,4 +1,4 @@
-package com.gofar.app;
+package com.gofar.app.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.gofar.app.R;
 
 import org.markdown4j.Markdown4jProcessor;
 

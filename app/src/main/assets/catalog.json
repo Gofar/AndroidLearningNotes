@@ -26,5 +26,20 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Java",
+    "path": "java/",
+    "data": []
+  },
+  {
+    "title": "高端",
+    "path": "high/",
+    "data": []
+  },
+  {
+    "title": "其他",
+    "path": "other/",
+    "data": []
   }
 ]
