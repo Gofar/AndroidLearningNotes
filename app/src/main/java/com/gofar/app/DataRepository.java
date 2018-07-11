@@ -47,7 +47,7 @@ public class DataRepository {
     }
 
     public LiveData<List<CatalogEntity>> getCatalogsBySecCatalog(String secCatalog) {
-        return mAppDataBase.getCatalogDao().getCatalosBySecCatalog(secCatalog);
+        return mAppDataBase.getCatalogDao().getCatalogsBySecCatalog(secCatalog);
     }
 
     public LiveData<CatalogEntity> getCataLogById(int catalogId) {
@@ -55,6 +55,6 @@ public class DataRepository {
     }
 
     public LiveData<List<CatalogEntity>> getSecCatalogByCatalog(String catalog) {
-        return mAppDataBase.getCatalogDao().getSecCatologsByCatalog(catalog);
+        return mAppDataBase.getCatalogDao().getSecCatalogsByCatalog(catalog);
     }
 }

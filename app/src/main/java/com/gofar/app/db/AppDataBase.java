@@ -6,6 +6,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.gofar.app.Catalog;
 import com.gofar.app.db.dao.CatalogDao;
@@ -56,7 +57,7 @@ public abstract class AppDataBase extends RoomDatabase {
                                     AppDataBase appDataBase = AppDataBase.getInstance(context);
                                     InputStream is = context.getAssets().open("catalog.json");
                                     Gson gson = new Gson();
-                                    List<Catalog> data = gson.fromJson(new InputStreamReader(is), new TypeToken<Catalog>() {
+                                    List<Catalog> data = gson.fromJson(new InputStreamReader(is), new TypeToken<List<Catalog>>() {
                                     }.getType());
                                     List<CatalogEntity> catalogs = new ArrayList<>();
                                     for (Catalog c : data) {
@@ -72,6 +73,8 @@ public abstract class AppDataBase extends RoomDatabase {
                                         }
                                     }
                                     appDataBase.getCatalogDao().insertAll(catalogs);
+                                    Log.e("tab", "data " + gson.toJson(data));
+                                    Log.e("tab", "catalogs" + gson.toJson(catalogs));
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }

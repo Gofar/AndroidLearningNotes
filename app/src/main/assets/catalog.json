@@ -5,7 +5,7 @@
     "data": [
       {
         "title": "Android基础知识",
-        "path": "android基础知识/",
+        "path": "base/",
         "data": [
           {
             "title": "四大组件是什么",
@@ -22,6 +22,20 @@
           {
             "title": "Activity各种情况下的生命周期",
             "path": "Activity各种情况下的生命周期.md"
+          }
+        ]
+      },
+      {
+        "title": "Android源码相关分析",
+        "path": "source/",
+        "data": [
+          {
+            "title": "Android动画框架实现原理",
+            "path": "Android动画框架实现原理.md"
+          },
+          {
+            "title": "Android各个版本API的区别",
+            "path": "Android各个版本API的区别.md"
           }
         ]
       }

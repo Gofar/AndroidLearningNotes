@@ -22,7 +22,7 @@
         android:id="@+id/fl_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#00FF00"
+        android:background="#c6c6c6"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

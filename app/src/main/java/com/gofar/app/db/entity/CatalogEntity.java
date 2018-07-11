@@ -10,7 +10,7 @@ import android.arch.persistence.room.PrimaryKey;
  */
 @Entity(tableName = "catalogs")
 public class CatalogEntity {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String catalog;
     private String secCatalog;
